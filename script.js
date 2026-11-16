@@ -65,8 +65,6 @@
   $("#stats").innerHTML = P.stats
     .map((s) => `<div class="card stat reveal"><div class="num" data-to="${s.value}" data-dec="${s.decimals || 0}" data-prefix="${esc(s.prefix || "")}" data-suffix="${esc(s.suffix || "")}">${esc(s.prefix || "")}0</div><div class="lbl">${esc(s.label)}</div></div>`)
     .join("");
-  $("#ghChart").src = `https://ghchart.rshah.org/667eea/${encodeURIComponent(P.githubUser)}`;
-  $("#ghLink").href = `https://github.com/${encodeURIComponent(P.githubUser)}`;
 
   // ---------- experience ----------
   const tags = (arr) => `<div class="tags">${arr.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>`;
