@@ -116,6 +116,11 @@
   $("#filters").innerHTML = P.projectFilters
     .map((f, i) => `<button class="filter${i === 0 ? " active" : ""}" data-f="${esc(f)}">${esc(f)}</button>`)
     .join("");
+  // "SeatVault: Event Ticket Booking" -> big name + small subtitle
+  const projTitle = (t) => {
+    const [name, sub] = t.split(/:\s+/);
+    return `<h3 class="ptitle"><span class="pname">${esc(name)}</span>${sub ? `<span class="psub">${esc(sub)}</span>` : ""}</h3>`;
+  };
   $("#projectsGrid").innerHTML = P.projects
     .map(
       (p, i) => {
@@ -140,7 +145,7 @@
             <span class="feat-cat">${esc(p.category)}</span>
             <em class="pnum">${num}</em>
           </div>
-          <h3>${esc(p.title)}</h3>
+          ${projTitle(p.title)}
           ${p.tagline ? `<p class="feat-tagline">${esc(p.tagline)}</p>` : ""}
           ${p.highlights ? `<div class="feat-stats">${p.highlights.map(([v, l]) => `<div><strong>${esc(v)}</strong><span>${esc(l)}</span></div>`).join("")}</div>` : ""}
           <p class="feat-desc">${p.description}</p>
@@ -167,7 +172,7 @@
             </div>
           </div>
           ${p.featured ? `<span class="feat-badge">★ Featured</span>` : ""}
-          <h3>${esc(p.title)}</h3>
+          ${projTitle(p.title)}
           <p>${p.description}</p>
           ${tags(p.tags)}
         </div>

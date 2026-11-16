@@ -114,7 +114,7 @@ const PORTFOLIO = {
       live: "https://abhishek360007.github.io/SeatVault/demo/",
     },
     {
-      title: "AI Resume Analyzer",
+      title: "AI Resume Analyzer: AI Recruitment Platform",
       category: "AI",
       image: "assets/projects/resume-wide.jpg",
       tagline: "LLM-powered hiring: parse, match and rank candidates with explainable scores.",
@@ -126,7 +126,7 @@ const PORTFOLIO = {
       live: "https://abhishek360007.github.io/Ai_Resume_Analyzer/demo/",
     },
     {
-      title: "AI Code Review Assist",
+      title: "AI Code Review Assist: Code Review Tool",
       category: "AI",
       image: "assets/projects/codereview.jpg",
       description:
@@ -156,7 +156,7 @@ const PORTFOLIO = {
       live: "https://tenanthub-admin.onrender.com",
     },
     {
-      title: "Campus Canteen Pre-ordering",
+      title: "Campus Canteen: Pre-ordering System",
       category: "Full Stack",
       image: "assets/projects/canteen.jpg",
       description:
@@ -166,7 +166,7 @@ const PORTFOLIO = {
       live: "https://abhishek360007.github.io/Canteen-Management-System-/demo/",
     },
     {
-      title: "Online Quiz Portal",
+      title: "Online Quiz Portal: Timed Quiz Platform",
       category: "Full Stack",
       image: "assets/projects/quiz.jpg",
       description:
@@ -186,7 +186,7 @@ const PORTFOLIO = {
       live: "",
     },
     {
-      title: "Scientific Calculator",
+      title: "Scientific Calculator: Pure HTML, CSS & JS",
       category: "Frontend",
       image: "",
       description:
