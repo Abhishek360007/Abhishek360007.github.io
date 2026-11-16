@@ -105,7 +105,6 @@ const PORTFOLIO = {
       title: "SeatVault: Event Ticket Booking",
       category: "Full Stack",
       image: "assets/projects/seatvault-wide.jpg",
-      featured: true,
       tagline: "Concurrency-safe event ticketing: no seat is ever sold twice.",
       highlights: [["25+", "REST APIs"], ["121", "Automated tests"], ["49%", "Faster startup"]],
       description:
@@ -118,7 +117,6 @@ const PORTFOLIO = {
       title: "AI Resume Analyzer",
       category: "AI",
       image: "assets/projects/resume-wide.jpg",
-      featured: true,
       tagline: "LLM-powered hiring: parse, match and rank candidates with explainable scores.",
       highlights: [["90+", "GraphQL operations"], ["768-dim", "pgvector RAG"], ["400+", "Automated tests"]],
       description:
