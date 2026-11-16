@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Personal portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=1794814361" />
+  <script>
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+  <canvas class="net" id="net" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo" id="logo"></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Achievements</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"></button>
+      <a class="btn btn-sm btn-primary" id="resumeBtn" target="_blank" rel="noopener">Resume</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu"></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="badge" id="openBadge"><span class="dot"></span> Open to Work</span>
+        <p class="hello">Hello, I'm</p>
+        <h1 class="hero-name" id="heroName"></h1>
+        <p class="hero-role"><span id="heroRole"></span><span class="caret">|</span></p>
+        <p class="hero-tagline" id="heroTagline"></p>
+        <div class="chips" id="workPrefs"></div>
+        <div class="cta">
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+          <a href="#projects" class="btn btn-ghost">View Work</a>
+        </div>
+        <div class="socials" id="heroSocials"></div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-wrap">
+          <div class="photo-ring"><img id="heroPhoto" alt="Profile photo" /></div>
+          <div class="orbit" id="orbit"></div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue">Scroll <span></span></a>
+    </section>
+
+    <!-- TECH MARQUEE -->
+    <div class="marquee" aria-label="Technologies I use">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section-title reveal">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal" id="aboutText"></div>
+        <ul class="info-list reveal" id="infoList"></ul>
+      </div>
+      <div class="stats" id="stats"></div>
+      <div class="card gh-card reveal">
+        <h3>GitHub Contributions</h3>
+        <img id="ghChart" alt="GitHub contribution graph" loading="lazy" />
+        <a id="ghLink" class="link-arrow" target="_blank" rel="noopener">View my GitHub profile →</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="section-title reveal">Work <span>Experience</span></h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section-title reveal">Technical <span>Skills</span></h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+      <div class="filters reveal" id="filters"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <h2 class="section-title reveal">Achievements & <span>Certifications</span></h2>
+      <div class="cert-grid" id="certGrid"></div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h2 class="section-title reveal"><span>Education</span></h2>
+      <div class="timeline" id="eduList"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+      <p class="section-sub reveal">Have a role, project or just want to say hi? My inbox is always open.</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal" id="contactInfo"></div>
+        <form class="card contact-form reveal" id="contactForm">
+          <div class="row">
+            <label>Name<input name="name" required /></label>
+            <label>Email<input name="email" type="email" required /></label>
+          </div>
+          <label>Subject<input name="subject" required /></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p id="footerText"></p>
+    <a href="#home" class="icon-btn" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="data.js?v=1794814361"></script>
+  <script src="script.js?v=1794814361"></script>
+</body>
+</html>
