@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1794839118" />
+  <link rel="stylesheet" href="style.css?v=1794839659" />
   <script>
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
@@ -101,7 +101,48 @@
       </div>
       <div class="hero-photo reveal">
         <div class="photo-wrap">
-          <div class="photo-ring"><img id="heroPhoto" alt="Profile photo" /></div>
+          <div class="photo-ring"><div class="ring-disc"></div></div>
+          <div class="buddy" id="buddy" role="img" aria-label="Cartoon of Abhishek coding on a laptop" title="Click me or drag me">
+            <svg viewBox="0 0 200 230" aria-hidden="true">
+              <defs>
+                <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#667eea"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+              </defs>
+              <ellipse class="b-shadow" cx="100" cy="222" rx="58" ry="7"/>
+              <!-- body -->
+              <path class="b-hoodie" d="M50 210 C50 160 66 136 100 136 C134 136 150 160 150 210 Z"/>
+              <path class="b-strings" d="M92 146 L90 166 M108 146 L110 166"/>
+              <!-- waving arm (shown while waving) -->
+              <g class="b-wave-arm">
+                <path class="b-sleeve" d="M140 160 C156 150 166 132 168 116" />
+                <circle class="b-skin" cx="169" cy="110" r="10"/>
+              </g>
+              <!-- laptop -->
+              <rect class="b-screen" x="58" y="158" width="84" height="52" rx="7"/>
+              <text class="b-logo" x="100" y="190" text-anchor="middle">&lt;/&gt;</text>
+              <rect class="b-base" x="46" y="208" width="108" height="8" rx="4"/>
+              <circle class="b-skin" cx="56" cy="204" r="9"/>
+              <circle class="b-skin b-rest-hand" cx="144" cy="204" r="9"/>
+              <!-- head -->
+              <g class="b-head">
+                <circle class="b-skin" cx="50" cy="84" r="10"/>
+                <circle class="b-skin" cx="150" cy="84" r="10"/>
+                <circle class="b-skin" cx="100" cy="80" r="52"/>
+                <path class="b-hair" d="M48 78 C44 38 72 22 100 24 C132 22 158 40 152 78 C146 62 136 54 124 50 C112 58 88 60 70 52 C60 58 52 66 48 78 Z"/>
+                <path class="b-hair-shine" d="M78 38 C90 32 104 31 116 34"/>
+                <path class="b-brow" d="M73 70 Q81 66 89 70"/>
+                <path class="b-brow" d="M111 70 Q119 66 127 70"/>
+                <g class="b-eyes">
+                  <g class="b-eye"><ellipse class="b-white" cx="81" cy="86" rx="10" ry="11"/><circle class="b-pupil" cx="81" cy="87" r="5.5"/><circle class="b-shine" cx="83" cy="84" r="1.8"/></g>
+                  <g class="b-eye"><ellipse class="b-white" cx="119" cy="86" rx="10" ry="11"/><circle class="b-pupil" cx="119" cy="87" r="5.5"/><circle class="b-shine" cx="121" cy="84" r="1.8"/></g>
+                </g>
+                <circle class="b-blush" cx="70" cy="104" r="7"/>
+                <circle class="b-blush" cx="130" cy="104" r="7"/>
+                <path class="b-smile" d="M88 108 Q100 120 112 108"/>
+                <ellipse class="b-oh" cx="100" cy="113" rx="6" ry="7"/>
+              </g>
+            </svg>
+          </div>
+          <div class="bubble" id="bubble" aria-live="polite"></div>
           <div class="orbit" id="orbit"></div>
         </div>
       </div>
@@ -178,7 +219,7 @@
     <a href="#home" class="icon-btn" aria-label="Back to top">↑</a>
   </footer>
 
-  <script src="data.js?v=1794839118"></script>
-  <script src="script.js?v=1794839118"></script>
+  <script src="data.js?v=1794839659"></script>
+  <script src="script.js?v=1794839659"></script>
 </body>
 </html>

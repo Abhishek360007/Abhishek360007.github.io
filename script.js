@@ -26,10 +26,6 @@
   $("#logo").innerHTML = `${esc(P.initials)}<span>.</span>`;
   $("#heroName").textContent = P.name;
   $("#heroTagline").innerHTML = P.tagline;
-  // No photo (or a broken one) -> show initials inside the ring
-  const initialsImg = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#667eea"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><rect width="100" height="100" fill="#141829"/><text x="50" y="62" font-size="34" text-anchor="middle" fill="url(#g)" font-family="Space Grotesk, sans-serif" font-weight="700">${P.initials}</text></svg>`)}`;
-  $("#heroPhoto").onerror = function () { this.onerror = null; this.src = initialsImg; };
-  $("#heroPhoto").src = P.photo || initialsImg;
   $("#resumeBtn").href = P.resume;
   if (!P.openToWork) $("#openBadge").remove();
   $("#workPrefs").innerHTML = P.workPrefs.map((w) => `<span class="chip">${esc(w)}</span>`).join("");
@@ -274,6 +270,92 @@
     const label = (links.querySelector(`a[href="#${s.id}"]`) || {}).textContent || s.id;
     t.insertAdjacentHTML("beforebegin", `<p class="eyebrow reveal"><span>${String(i + 1).padStart(2, "0")}</span>${esc(label)}</p>`);
   });
+
+
+  // ---------- cartoon buddy ----------
+  (() => {
+    const buddy = $("#buddy"), bubble = $("#bubble");
+    if (!buddy) return;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lines = [
+      "Hi, I'm Abhishek! 👋",
+      "I write Java & Spring Boot ☕",
+      "…and React on the front end ⚛️",
+      "450+ DSA problems solved 🧠",
+      "Psst, my projects are just below ↓",
+      "Open to full stack roles ✨",
+    ];
+    let line = 0, bubbleTimer;
+    const say = (text, ms = 2600) => {
+      bubble.textContent = text;
+      bubble.classList.add("show");
+      clearTimeout(bubbleTimer);
+      bubbleTimer = setTimeout(() => bubble.classList.remove("show"), ms);
+    };
+    setTimeout(() => say("Hi! 👋 Click me or drag me around", 3800), 900);
+
+    // eyes follow the cursor
+    const pupils = buddy.querySelectorAll(".b-pupil, .b-shine");
+    addEventListener("pointermove", (e) => {
+      const r = buddy.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height * 0.36;
+      const a = Math.atan2(e.clientY - cy, e.clientX - cx);
+      const d = Math.min(1, Math.hypot(e.clientX - cx, e.clientY - cy) / 300);
+      const x = Math.cos(a) * 4 * d, y = Math.sin(a) * 4 * d;
+      pupils.forEach((p) => (p.style.transform = `translate(${x}px, ${y}px)`));
+    }, { passive: true });
+
+    // blink every few seconds
+    const blink = () => {
+      buddy.classList.add("blink");
+      setTimeout(() => buddy.classList.remove("blink"), 160);
+      setTimeout(blink, 2500 + Math.random() * 3000);
+    };
+    if (!reduce) setTimeout(blink, 2000);
+
+    // wave on hover
+    let waveTimer;
+    const wave = () => {
+      buddy.classList.add("wave");
+      clearTimeout(waveTimer);
+      waveTimer = setTimeout(() => buddy.classList.remove("wave"), 1600);
+    };
+    buddy.addEventListener("pointerenter", wave);
+
+    // drag around, spring back on release; a plain click makes it jump and talk
+    let start = null, moved = false;
+    buddy.addEventListener("pointerdown", (e) => {
+      start = { x: e.clientX, y: e.clientY };
+      moved = false;
+      buddy.setPointerCapture(e.pointerId);
+      buddy.classList.add("held");
+    });
+    buddy.addEventListener("pointermove", (e) => {
+      if (!start) return;
+      const dx = e.clientX - start.x, dy = e.clientY - start.y;
+      if (!moved && Math.hypot(dx, dy) > 6) { moved = true; buddy.classList.add("dragging"); say("Whoa, where are we going?! 😲", 1800); }
+      if (moved) buddy.style.translate = `${dx}px ${dy}px`;
+    });
+    const release = () => {
+      if (!start) return;
+      start = null;
+      buddy.classList.remove("held", "dragging");
+      if (moved) {
+        buddy.style.translate = "";
+        setTimeout(() => say("Phew, home sweet home 😅", 1800), 350);
+      } else {
+        buddy.classList.remove("jump");
+        void buddy.offsetWidth;
+        buddy.classList.add("jump");
+        wave();
+        say(lines[line++ % lines.length]);
+      }
+    };
+    buddy.addEventListener("pointerup", release);
+    buddy.addEventListener("pointercancel", release);
+    buddy.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); say(lines[line++ % lines.length]); wave(); } });
+    buddy.tabIndex = 0;
+  })();
 
   // orbiting tech icons around the photo ring
   const orbitIcons = ["java", "spring", "react", "docker", "postgres", "redis"];

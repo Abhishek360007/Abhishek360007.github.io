@@ -661,3 +661,75 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 }
 .project.featured .pname { font-size: clamp(1.8rem, 2.8vw, 2.3rem); }
 :root[data-theme="light"] .pname { background-image: linear-gradient(90deg, #4f5fd6, #9333ea 55%, #0891b2); }
+
+/* =========================================================
+   CARTOON BUDDY (replaces the profile picture)
+   ========================================================= */
+.ring-disc { width: 100%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #1f2440, #12152a 70%); }
+.buddy {
+  position: absolute; left: 50%; bottom: 6%; width: calc(var(--size) * 0.78); margin-left: calc(var(--size) * -0.39);
+  z-index: 2; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none;
+  transition: translate 0.55s cubic-bezier(.34, 1.56, .64, 1);
+  outline: none;
+}
+.buddy svg { display: block; width: 100%; overflow: visible; animation: bob 3.2s ease-in-out infinite; transform-origin: 50% 100%; }
+.buddy.dragging { cursor: grabbing; transition: none; }
+.buddy.dragging svg { animation: none; transform: rotate(-6deg) scale(1.04); }
+.buddy:focus-visible { outline: 2px dashed var(--accent); outline-offset: 6px; border-radius: 20px; }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+/* parts */
+.b-shadow { fill: #000; opacity: 0.25; }
+.b-hoodie { fill: url(#hoodie); }
+.b-strings { stroke: #e9ecff; stroke-width: 3; stroke-linecap: round; opacity: 0.8; }
+.b-sleeve { fill: none; stroke: #8b6ff2; stroke-width: 20; stroke-linecap: round; }
+.b-skin { fill: #d9a07a; }
+.b-hair { fill: #4a2f27; }
+.b-hair-shine { fill: none; stroke: #7a5246; stroke-width: 4; stroke-linecap: round; opacity: 0.8; }
+.b-brow { fill: none; stroke: #4a2f27; stroke-width: 3.5; stroke-linecap: round; }
+.b-white { fill: #fff; }
+.b-pupil { fill: #1d1b2b; transition: transform 0.12s ease-out; }
+.b-shine { fill: #fff; transition: transform 0.12s ease-out; }
+.b-blush { fill: #ff8fa3; opacity: 0.45; }
+.b-smile { fill: none; stroke: #5a2d2d; stroke-width: 3.5; stroke-linecap: round; }
+.b-oh { fill: #5a2d2d; opacity: 0; }
+.b-screen { fill: #2a2f45; stroke: #3b4262; stroke-width: 2; }
+.b-logo { fill: #8b9cf5; font: 700 17px "Space Grotesk", monospace; }
+.b-base { fill: #c9cee3; }
+
+/* blinking */
+.b-eye { transform-box: fill-box; transform-origin: center; transition: transform 0.08s ease; }
+.buddy.blink .b-eye { transform: scaleY(0.1); }
+
+/* waving: hide the resting hand, raise the arm and wiggle it */
+.b-wave-arm { opacity: 0; transform-box: view-box; transform-origin: 140px 160px; }
+.buddy.wave .b-wave-arm { opacity: 1; animation: wave 0.4s ease-in-out 4 alternate; }
+.buddy.wave .b-rest-hand { opacity: 0; }
+@keyframes wave { from { transform: rotate(-10deg); } to { transform: rotate(18deg); } }
+
+/* surprised face while being dragged */
+.buddy.dragging .b-smile { opacity: 0; }
+.buddy.dragging .b-oh { opacity: 1; }
+
+/* jump on click */
+.buddy.jump svg { animation: hop 0.5s cubic-bezier(.3, 1.6, .6, 1); }
+@keyframes hop { 0% { transform: translateY(0) scale(1, 1); } 30% { transform: translateY(0) scale(1.06, 0.92); } 60% { transform: translateY(-22px) scale(0.96, 1.05); } 100% { transform: translateY(0) scale(1, 1); } }
+
+/* speech bubble */
+.bubble {
+  position: absolute; z-index: 3; top: -7%; right: -12%; max-width: 230px;
+  padding: 10px 14px; border-radius: 16px 16px 16px 4px;
+  background: #ffffff; color: #1b1d2b; font-size: 0.9rem; font-weight: 600; line-height: 1.35;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.6);
+  opacity: 0; transform: translateY(8px) scale(0.92); transform-origin: bottom left; pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(.34, 1.56, .64, 1);
+}
+.bubble.show { opacity: 1; transform: none; }
+
+@media (max-width: 960px) {
+  .bubble { right: 0; top: -4%; font-size: 0.82rem; max-width: 190px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .buddy svg { animation: none !important; }
+  .buddy.wave .b-wave-arm { animation: none; }
+}
