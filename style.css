@@ -296,7 +296,7 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 @media (max-width: 560px) {
   .contact-form .row { grid-template-columns: 1fr; }
   .period { text-align: left; }
-  .skills-grid, .projects-grid, .cert-grid { grid-template-columns: 1fr; }
+  .projects-grid, .cert-grid { grid-template-columns: 1fr; }
   #resumeBtn { display: none; }
 }
 
