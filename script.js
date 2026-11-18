@@ -170,6 +170,7 @@
           ${p.featured ? `<span class="feat-badge">★ Featured</span>` : ""}
           ${projTitle(p.title)}
           <p class="pdesc">${p.description}</p>
+          <button class="more-btn" type="button" aria-expanded="false" hidden>Read more</button>
           ${tags(p.tags)}
         </div>
       </article>`;
@@ -204,7 +205,27 @@
     document.querySelectorAll(".filter").forEach((x) => x.classList.toggle("active", x === b));
     filter = b.dataset.f;
     applyFilter();
+    checkClamps();
   });
+
+  // Long descriptions are clamped to a few lines; "Read more" appears only where text is cut off.
+  const checkClamps = () =>
+    document.querySelectorAll("#projectsGrid .pdesc").forEach((p) => {
+      const btn = p.nextElementSibling;
+      if (p.classList.contains("open") || !p.offsetParent) return;
+      btn.hidden = p.scrollHeight <= p.clientHeight + 1;
+    });
+  $("#projectsGrid").addEventListener("click", (e) => {
+    const btn = e.target.closest(".more-btn");
+    if (!btn) return;
+    const open = btn.previousElementSibling.classList.toggle("open");
+    btn.textContent = open ? "Show less" : "Read more";
+    btn.setAttribute("aria-expanded", open);
+  });
+  checkClamps();
+  if (document.fonts) document.fonts.ready.then(checkClamps);
+  addEventListener("resize", checkClamps);
+  moreBtn.addEventListener("click", checkClamps);
 
   // ---------- certifications ----------
   $("#certGrid").innerHTML = P.certifications

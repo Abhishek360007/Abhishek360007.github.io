@@ -229,6 +229,12 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 .project-links svg { width: 16px; height: 16px; }
 /* descriptions: clamp to 4 lines, "Read more" expands */
 .project .pdesc { flex: none; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; line-clamp: 4; overflow: hidden; }
+.project .pdesc.open { display: block; -webkit-line-clamp: unset; line-clamp: none; }
+.more-btn {
+  align-self: flex-start; margin-top: 6px; padding: 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 0.85rem; font-weight: 600; color: var(--accent);
+}
+.more-btn:hover { text-decoration: underline; }
 .project-body > .tags { margin-top: auto; padding-top: 16px; }
 .more-projects { display: flex; justify-content: center; margin-top: 32px; }
 .more-projects .btn { color: var(--text); }
