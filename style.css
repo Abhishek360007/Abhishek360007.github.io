@@ -284,7 +284,8 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
   .nav-links a { padding: 12px 14px; }
   .nav-links a::after { display: none; }
   .menu-btn { display: grid; }
-  .hero { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+  .hero { grid-template-columns: minmax(0, 1fr); text-align: center; padding-top: 100px; }
+  .hero > * { min-width: 0; }
   .hero-photo { order: -1; }
   .photo-ring { width: min(240px, 60vw); }
   .hero-tagline { margin: 0 auto; }

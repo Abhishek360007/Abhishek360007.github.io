@@ -1,0 +1,55 @@
+/* Glue between React Bits components and the existing style.css. */
+
+/* GradientText paints the gradient itself, so drop the static one underneath. */
+.rb .rb-hero-name,
+.rb .section-title > span.rb-title {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: inherit;
+}
+.rb .rb-hero-name .gradient-text,
+.rb .section-title > span.rb-title .gradient-text {
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+/* BlurText renders a flex row; keep the original alignment of each line. */
+.rb #contact .section-sub > p {
+  justify-content: center;
+}
+@media (max-width: 960px) {
+  .rb .hero .hello > p {
+    justify-content: center;
+  }
+}
+
+/* StarBorder "Let's Talk": keep the size and lift of the other hero buttons. */
+.rb .rb-star-host {
+  display: inline-flex;
+}
+.rb .rb-star.btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.rb .rb-star.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.rb .rb-star.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* DecryptedText: scrambled letters use the accent colour. */
+.rb .rb-encrypted {
+  color: var(--accent);
+}
+
+/* ClickSpark: full-screen layer above everything, never blocks clicks. */
+.rb-spark-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
