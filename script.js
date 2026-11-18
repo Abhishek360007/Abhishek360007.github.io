@@ -176,12 +176,34 @@
       }
     )
     .join("");
+  // Filters, plus "Show all": under "All", only the first P.projectsVisible cards show until expanded.
+  const cards = [...document.querySelectorAll("#projectsGrid .project")];
+  const limit = P.projectsVisible || cards.length;
+  let filter = "All", showAll = cards.length <= limit;
+  $("#projectsGrid").insertAdjacentHTML("afterend", `<div class="more-projects"><button class="btn btn-ghost" id="moreProjects" type="button">Show all ${cards.length} projects</button></div>`);
+  const moreBtn = $("#moreProjects");
+  const applyFilter = () => {
+    let shown = 0;
+    cards.forEach((c) => {
+      const match = filter === "All" || c.dataset.cat === filter;
+      const visible = match && (filter !== "All" || showAll || shown < limit);
+      if (visible) shown++;
+      c.classList.toggle("hide", !visible);
+    });
+    moreBtn.parentElement.hidden = showAll || filter !== "All";
+  };
+  applyFilter();
+  moreBtn.addEventListener("click", () => {
+    showAll = true;
+    applyFilter();
+    cards[limit]?.querySelector(".shot")?.focus({ preventScroll: true });
+  });
   $("#filters").addEventListener("click", (e) => {
     const b = e.target.closest(".filter");
     if (!b) return;
     document.querySelectorAll(".filter").forEach((x) => x.classList.toggle("active", x === b));
-    const f = b.dataset.f;
-    document.querySelectorAll(".project").forEach((c) => c.classList.toggle("hide", f !== "All" && c.dataset.cat !== f));
+    filter = b.dataset.f;
+    applyFilter();
   });
 
   // ---------- certifications ----------

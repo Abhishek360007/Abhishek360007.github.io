@@ -100,6 +100,7 @@ const PORTFOLIO = {
   // category must match one of projectFilters (except "All")
   // image: screenshot shown on the card ("" = generated banner). featured: true = large card (tagline + highlights shown only on featured cards).
   projectFilters: ["All", "Full Stack", "AI", "Backend", "Frontend"],
+  projectsVisible: 6, // the rest appear after "Show all projects" (0 = show everything)
   projects: [
     {
       title: "SeatVault: Event Ticket Booking",

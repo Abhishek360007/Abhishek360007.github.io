@@ -230,6 +230,9 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 /* descriptions: clamp to 4 lines, "Read more" expands */
 .project .pdesc { flex: none; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; line-clamp: 4; overflow: hidden; }
 .project-body > .tags { margin-top: auto; padding-top: 16px; }
+.more-projects { display: flex; justify-content: center; margin-top: 32px; }
+.more-projects .btn { color: var(--text); }
+.more-projects[hidden] { display: none; }
 .project h3 { font-size: 1.2rem; margin-bottom: 8px; }
 .project .cat { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
 .project p { color: var(--muted); flex: 1; margin-top: 8px; }
