@@ -163,8 +163,8 @@
         <div class="project-body">
           <div class="project-top"><em class="pnum">${num}</em>
             <div class="project-links">
-              ${p.github ? `<a href="${esc(p.github)}" target="_blank" rel="noopener" aria-label="GitHub">${I.github}</a>` : ""}
-              ${p.live ? `<a href="${esc(p.live)}" target="_blank" rel="noopener" aria-label="Live demo">${I.ext}</a>` : ""}
+              ${p.live ? `<a href="${esc(p.live)}" target="_blank" rel="noopener">${I.ext}<span>Live demo</span></a>` : ""}
+              ${p.github ? `<a href="${esc(p.github)}" target="_blank" rel="noopener">${I.github}<span>Code</span></a>` : ""}
             </div>
           </div>
           ${p.featured ? `<span class="feat-badge">★ Featured</span>` : ""}

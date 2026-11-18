@@ -223,6 +223,10 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 .project-links a { color: var(--muted); transition: color 0.2s; }
 .project-links a:hover { color: var(--accent); }
 .project-links svg { width: 20px; height: 20px; }
+/* labeled demo / code links */
+.project-links { gap: 16px; }
+.project-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; }
+.project-links svg { width: 16px; height: 16px; }
 .project h3 { font-size: 1.2rem; margin-bottom: 8px; }
 .project .cat { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
 .project p { color: var(--muted); flex: 1; margin-top: 8px; }
