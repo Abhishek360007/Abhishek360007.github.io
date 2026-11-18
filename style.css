@@ -410,6 +410,7 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 
 /* skills: icon tiles */
 .skills-grid { display: block; columns: 3 300px; column-gap: 20px; }
+.skills-grid > .card { break-inside: avoid; }
 .skills-grid h3 { display: flex; align-items: center; gap: 10px; }
 .skills-grid h3::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--grad); transform: rotate(45deg); }
 .skill-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 10px; }
