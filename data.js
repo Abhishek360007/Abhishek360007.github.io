@@ -147,6 +147,16 @@ const PORTFOLIO = {
       live: "https://abhishek360007.github.io/ShopVerse/demo/",
     },
     {
+      title: "Attendance Management System: Biometric Attendance & Payroll",
+      category: "Full Stack",
+      image: "assets/projects/attendance.jpg",
+      description:
+        "Attendance, leave and payroll for companies using <b>ZKTeco biometric devices</b>. A sync agent streams punches from the office PC into PostgreSQL; the dashboard works out present, late, half day and overtime, with <b>4-role access</b>, leave and punch-correction approvals, <b>attendance-based payroll</b> with CSV export, email alerts and an audit log. Backed by <b>44 tests</b>.",
+      tags: ["Java 25", "Spring Boot 4", "PostgreSQL", "Flyway", "Testcontainers", "Docker"],
+      github: "https://github.com/Abhishek360007/Attendence-Management-System",
+      live: "https://attendance-management-system-5pid.onrender.com",
+    },
+    {
       title: "TenantHub: Multi-tenant SaaS",
       category: "Full Stack",
       image: "assets/projects/tenanthub.jpg",
