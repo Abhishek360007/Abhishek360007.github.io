@@ -450,7 +450,6 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
 @media (max-width: 960px) {
   .photo-wrap { --size: min(240px, 60vw); }
   .orb { width: 32px; height: 32px; margin: -16px 0 0 -16px; }
-  .skills-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .skill-list { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); }
