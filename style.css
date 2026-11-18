@@ -24,6 +24,8 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+/* stop wide decorations (orbit, glows) from making phones scroll sideways; clip keeps sticky/fixed working */
+html, body { overflow-x: clip; }
 body {
   font-family: "Inter", system-ui, sans-serif;
   background: var(--bg);
@@ -313,7 +315,7 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
   .contact-form .row { grid-template-columns: 1fr; }
   .period { text-align: left; }
   .projects-grid, .cert-grid { grid-template-columns: 1fr; }
-  #resumeBtn { display: none; }
+  #resumeBtn { padding: 7px 12px; }
 }
 
 /* =========================================================
