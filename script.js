@@ -169,7 +169,7 @@
           </div>
           ${p.featured ? `<span class="feat-badge">★ Featured</span>` : ""}
           ${projTitle(p.title)}
-          <p>${p.description}</p>
+          <p class="pdesc">${p.description}</p>
           ${tags(p.tags)}
         </div>
       </article>`;
