@@ -226,8 +226,8 @@ const PORTFOLIO = {
     { title: "LeetCode Contest Rating", issuer: "450+ problems on LeetCode, Codeforces & HackerRank", date: "Competitive Programming", url: "https://leetcode.com/u/Abhishek360007/", badge: "Top 6.9%" },
     { title: "Web Development Internship", issuer: "CodSoft · 4-week virtual internship", date: "Jul 2025 – Aug 2025", url: "assets/certificates/codsoft-web-development.pdf", badge: "" },
     { title: "Adobe University Hackathon 2026", issuer: "Adobe · Round 1 Online Assessment (MCQ + Coding), via Unstop", date: "Aug 2026", url: "assets/certificates/adobe-university-hackathon-2026.pdf", badge: "" },
+    { title: "Advanced Python Training", issuer: "Appwars Technologies · 10-day training at Tula's Institute", date: "Nov 2025", url: "assets/certificates/appwars-advanced-python.pdf", badge: "" },
     { title: "AWS Add-on Course Certification", issuer: "Cloud Computing Fundamentals", date: "Certification", url: "", badge: "" },
-    { title: "Advanced Python Add-on Course", issuer: "Advanced Programming & Problem-Solving", date: "Certification", url: "", badge: "" },
     { title: "Inter-college Technical Fest", issuer: "Represented Tula's Institute; project commended by the industry judging panel", date: "Achievement", url: "", badge: "" },
   ],
 
