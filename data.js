@@ -63,6 +63,7 @@ const PORTFOLIO = {
       points: [
         "Built a <b>personal portfolio website</b> with <b>HTML and CSS</b>, with header, about, skills, projects, resume download and contact sections.",
         "Designed a <b>landing page</b> with a structured layout (banner, content sections and a call-to-action link), focusing on alignment, spacing and colour.",
+        "Built a working <b>calculator</b> in <b>HTML, CSS and JavaScript</b> with arithmetic operators, decimals, clear and backspace, and error handling for invalid input.",
       ],
       tags: ["HTML", "CSS"],
     },
