@@ -62,6 +62,7 @@ const PORTFOLIO = {
       summary: "Completed a 4-week virtual internship, building front-end projects for the program's assigned tasks.",
       points: [
         "Built a <b>personal portfolio website</b> with <b>HTML and CSS</b>, with header, about, skills, projects, resume download and contact sections.",
+        "Designed a <b>landing page</b> with a structured layout (banner, content sections and a call-to-action link), focusing on alignment, spacing and colour.",
       ],
       tags: ["HTML", "CSS"],
     },
