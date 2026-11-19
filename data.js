@@ -66,7 +66,7 @@ const PORTFOLIO = {
         "Built a working <b>calculator</b> in <b>HTML, CSS and JavaScript</b> with arithmetic operators, decimals, clear and backspace, and error handling for invalid input.",
         "Managed and published all task code on <b>GitHub</b>.",
       ],
-      tags: ["HTML", "CSS"],
+      tags: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     },
   ],
 
