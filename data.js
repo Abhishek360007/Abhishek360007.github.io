@@ -61,6 +61,7 @@ const PORTFOLIO = {
       location: "Remote",
       summary: "Completed a 4-week virtual internship, building front-end projects for the program's assigned tasks.",
       points: [
+        "Built a <b>personal portfolio website</b> with <b>HTML and CSS</b>, with header, about, skills, projects, resume download and contact sections.",
       ],
       tags: ["HTML", "CSS"],
     },
