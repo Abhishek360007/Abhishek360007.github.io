@@ -231,7 +231,7 @@ const PORTFOLIO = {
     { title: "Generative AI Fluency", issuer: "nasscom FutureSkills Prime · IT-ITeS Sector Skills Council", date: "Aug 2026", url: "assets/certificates/nasscom-generative-ai-fluency.pdf", badge: "" },
     { title: "Gen AI NASSCOM Course", issuer: "SFJ · Skill Development Program", date: "Feb 2026", url: "assets/certificates/sfj-gen-ai-nasscom.jpg", badge: "" },
     { title: "HTML Training", issuer: "Spoken Tutorial Project, IIT Bombay · Score 82.5%", date: "Jun 2024", url: "assets/certificates/iit-bombay-spoken-tutorial-html.pdf", badge: "" },
-    { title: "AWS Add-on Course Certification", issuer: "Cloud Computing Fundamentals", date: "Certification", url: "", badge: "" },
+    { title: "AWS Cloud Practitioner", issuer: "ICT Academy in association with AWS · Grade B", date: "Apr 2025", url: "assets/certificates/ict-academy-aws-cloud-practitioner.pdf", badge: "" },
     { title: "Inter-college Technical Fest", issuer: "Represented Tula's Institute; project commended by the industry judging panel", date: "Achievement", url: "", badge: "" },
   ],
 
