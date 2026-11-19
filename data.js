@@ -37,7 +37,7 @@ const PORTFOLIO = {
     { value: 450, suffix: "+", label: "DSA Problems Solved" },
     { prefix: "Top ", value: 6.9, decimals: 1, suffix: "%", label: "LeetCode Contest Rating" },
     { value: 500, suffix: "+", label: "Automated Tests Written" },
-    { value: 8, suffix: "", label: "Live Deployed Projects" },
+    { value: 9, suffix: "", label: "Live Deployed Projects" },
   ],
 
   experience: [
