@@ -54,6 +54,16 @@ const PORTFOLIO = {
       ],
       tags: ["Java", "Spring Boot", "React.js", "Spring Data JPA", "Hibernate", "Git", "Postman"],
     },
+    {
+      role: "Web Development Intern",
+      company: "CodSoft",
+      period: "Jul 2025 – Aug 2025",
+      location: "Remote",
+      summary: "Completed a 4-week virtual internship, building front-end projects for the program's assigned tasks.",
+      points: [
+      ],
+      tags: ["HTML", "CSS"],
+    },
   ],
 
   // Icon can be:
