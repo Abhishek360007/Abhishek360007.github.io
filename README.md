@@ -2,7 +2,7 @@
 
 Personal portfolio of **Abhishek Raj**, Full Stack Java Developer.
 
-Live: https://abhishek360007.github.io/
+Live: https://abhishekraj.is-a.dev/
 
 Plain HTML, CSS and JavaScript, with no build step. All content lives in `data.js`.
 
