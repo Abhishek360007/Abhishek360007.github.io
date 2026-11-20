@@ -218,7 +218,7 @@ const PORTFOLIO = {
         "A fast, responsive scientific calculator in pure HTML, CSS and JS: trig, logs, powers, DEG/RAD, live preview, history, keyboard support and themes. No eval(), no dependencies.",
       tags: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Abhishek360007/Scientific-Calculator",
-      live: "https://abhishek360007.github.io/Scientific-Calculator/",
+      live: "https://abhishekraj.is-a.dev/Scientific-Calculator/",
     },
   ],
 
