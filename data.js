@@ -126,7 +126,7 @@ const PORTFOLIO = {
         "Concurrency-safe ticketing with <b>25+ REST APIs</b> and live WebSocket seat maps; <b>row locking</b> means no seat is ever sold twice. Razorpay checkout with idempotent payments and auto-refunds, signed QR tickets with gate check-in, <b>121 automated tests</b>, and startup cut by <b>49%</b> with a JVM CDS archive.",
       tags: ["Java 17", "Spring Boot 3", "PostgreSQL", "Redis", "WebSockets", "Docker"],
       github: "https://github.com/Abhishek360007/SeatVault",
-      live: "https://abhishek360007.github.io/SeatVault/demo/",
+      live: "https://abhishekraj.is-a.dev/SeatVault/demo/",
     },
     {
       title: "AI Resume Analyzer: AI Recruitment Platform",
