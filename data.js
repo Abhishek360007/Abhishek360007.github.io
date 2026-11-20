@@ -188,7 +188,7 @@ const PORTFOLIO = {
         "Order ahead and skip the queue: a live kitchen board, pickup codes, wallet and Razorpay payments, demand forecasting, smart recommendations, reviews and complaints.",
       tags: ["Spring Boot 3", "React 19", "PostgreSQL", "Razorpay"],
       github: "https://github.com/Abhishek360007/Canteen-Management-System-",
-      live: "https://abhishek360007.github.io/Canteen-Management-System-/demo/",
+      live: "https://abhishekraj.is-a.dev/Canteen-Management-System-/demo/",
     },
     {
       title: "Online Quiz Portal: Timed Quiz Platform",
