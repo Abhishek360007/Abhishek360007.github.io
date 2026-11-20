@@ -138,7 +138,7 @@ const PORTFOLIO = {
         "AI hiring platform that parses bulk PDF/DOCX resumes with an LLM and ranks candidates using <b>explainable weighted scoring</b>. RAG semantic search over <b>768-dim pgvector</b> embeddings, an async Pekko pipeline with live SSE progress, and <b>90+ GraphQL operations</b> secured with 4-role RBAC. Backed by <b>400+ tests</b>.",
       tags: ["Java 21", "Spring AI", "React", "TypeScript", "pgvector", "GraphQL"],
       github: "https://github.com/Abhishek360007/Ai_Resume_Analyzer",
-      live: "https://abhishek360007.github.io/Ai_Resume_Analyzer/demo/",
+      live: "https://abhishekraj.is-a.dev/Ai_Resume_Analyzer/demo/",
     },
     {
       title: "AI Code Review Assist: Code Review Tool",
