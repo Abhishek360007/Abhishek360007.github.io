@@ -158,7 +158,7 @@ const PORTFOLIO = {
         "Full-stack store with JWT auth, a wishlist synced across devices, server-side order pricing, 6-step order tracking and an admin analytics dashboard. Dockerised, with GitHub Actions CI, deployed on Render and Neon.",
       tags: ["Spring Boot 4", "Java 25", "React 18", "Docker", "CI/CD"],
       github: "https://github.com/Abhishek360007/ShopVerse",
-      live: "https://abhishek360007.github.io/ShopVerse/demo/",
+      live: "https://abhishekraj.is-a.dev/ShopVerse/demo/",
     },
     {
       title: "Attendance Management System: Biometric Attendance & Payroll",
