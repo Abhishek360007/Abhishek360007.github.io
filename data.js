@@ -148,7 +148,7 @@ const PORTFOLIO = {
         "Paste code in <b>16 languages</b> and get a scored, severity-ranked review with exact line numbers, a fix for every issue and a corrected-file diff, powered by Google Gemini.",
       tags: ["Java 17", "Spring Boot 3", "React 18", "PostgreSQL", "Gemini"],
       github: "https://github.com/Abhishek360007/AI-Code-Review-Assist",
-      live: "https://abhishek360007.github.io/AI-Code-Review-Assist/demo/",
+      live: "https://abhishekraj.is-a.dev/AI-Code-Review-Assist/demo/",
     },
     {
       title: "ShopVerse: E-commerce Platform",
