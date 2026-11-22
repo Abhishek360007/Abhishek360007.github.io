@@ -48,7 +48,7 @@ const PORTFOLIO = {
       location: "Remote",
       summary: "Built and shipped full-stack web applications for client projects.",
       points: [
-        "Developed and deployed full-stack web applications using <b>Java, Spring Boot and React.js</b> for client projects.",
+        "Built and deployed <b>ShopVerse</b>, an e-commerce platform (<b>React.js, Spring Boot, PostgreSQL</b>) with <b>34 REST APIs</b> for search, cart, checkout and order tracking.",
         "Designed <b>RESTful APIs</b> and backend services with Spring Boot, using <b>Spring Data JPA and Hibernate</b> for efficient, scalable data access.",
         "Collaborated through <b>Git</b>-based workflows and code reviews; tested API endpoints with <b>Postman</b>.",
       ],
