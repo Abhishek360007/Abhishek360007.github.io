@@ -53,7 +53,7 @@ const PORTFOLIO = {
         "Prevented overselling with <b>race-safe stock updates</b> and built an <b>admin dashboard</b> for revenue, low-stock alerts and orders.",
         "Shipped with <b>Docker</b> and <b>GitHub Actions CI/CD</b> running <b>65 automated tests</b>; documented APIs with <b>Swagger</b>.",
       ],
-      tags: ["Java", "Spring Boot", "React.js", "PostgreSQL", "Spring Data JPA", "Hibernate", "Spring Security", "Stripe", "Git", "Postman"],
+      tags: ["Java", "Spring Boot", "React.js", "PostgreSQL", "Spring Data JPA", "Hibernate", "Spring Security", "Stripe", "Docker", "GitHub Actions", "Postman"],
     },
     {
       role: "Web Development Intern",
