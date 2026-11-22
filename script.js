@@ -235,9 +235,10 @@
         const inner = `<span class="cx-ix">${String(i + 1).padStart(2, "0")}</span>
         <div><h3>${esc(c.title)}</h3><p>${esc(c.issuer)}</p>
         <div class="cx-meta"><span>${esc(c.date)}</span>${c.badge ? `<b>${esc(c.badge)}</b>` : ""}${c.url ? `<span class="cx-view">view ↗</span>` : ""}</div></div>`;
+        const style = `style="--d:${(i % 3) * 0.08}s"`;
         return c.url
-          ? `<a class="cx reveal-x" href="${esc(c.url)}" target="_blank" rel="noopener">${inner}</a>`
-          : `<div class="cx reveal-x">${inner}</div>`;
+          ? `<a class="cx reveal-x" ${style} href="${esc(c.url)}" target="_blank" rel="noopener">${inner}</a>`
+          : `<div class="cx reveal-x" ${style}>${inner}</div>`;
       }
     )
     .join("");
