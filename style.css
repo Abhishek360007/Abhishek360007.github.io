@@ -771,3 +771,4 @@ a.cx:hover { border-color: var(--accent); }
 .reveal-x { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease var(--d, 0s), transform 0.7s cubic-bezier(.2,.7,.2,1) var(--d, 0s), border-color 0.3s; }
 .reveal-x.in { opacity: 1; transform: none; }
 a.cx.reveal-x.in:hover { transform: translateY(-3px); transition: transform 0.3s, border-color 0.3s; }
+@media (prefers-reduced-motion: reduce) { .reveal-x { opacity: 1; transform: none; transition: none; } }
