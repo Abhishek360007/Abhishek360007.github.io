@@ -49,7 +49,7 @@ const PORTFOLIO = {
       summary: "Built and shipped full-stack web applications for client projects.",
       points: [
         "Built and deployed <b>ShopVerse</b>, an e-commerce platform (<b>React.js, Spring Boot, PostgreSQL</b>) with <b>34 REST APIs</b> for search, cart, checkout and order tracking.",
-        "Designed <b>RESTful APIs</b> and backend services with Spring Boot, using <b>Spring Data JPA and Hibernate</b> for efficient, scalable data access.",
+        "Secured it with <b>Spring Security, JWT and Google OAuth2</b>; added <b>Stripe</b> payments via a webhook that records each payment exactly once.",
         "Collaborated through <b>Git</b>-based workflows and code reviews; tested API endpoints with <b>Postman</b>.",
       ],
       tags: ["Java", "Spring Boot", "React.js", "Spring Data JPA", "Hibernate", "Git", "Postman"],
