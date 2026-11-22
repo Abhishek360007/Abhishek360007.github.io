@@ -530,5 +530,5 @@
     }),
     { threshold: 0.12 }
   );
-  document.querySelectorAll(".reveal").forEach((el) => revObs.observe(el));
+  document.querySelectorAll(".reveal, .reveal-x").forEach((el) => revObs.observe(el));
 })();
