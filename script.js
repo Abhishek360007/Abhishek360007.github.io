@@ -230,12 +230,14 @@
   // ---------- certifications ----------
   $("#certGrid").innerHTML = P.certifications
     .map(
-      (c) => {
-        const inner = `<span class="cert-icon">${I.award}</span>
-        <div><h3>${esc(c.title)}${c.badge ? `<span class="top">${esc(c.badge)}</span>` : ""}</h3><p>${esc(c.issuer)}</p><p class="cert-date">${esc(c.date)}</p></div>`;
+      (c, i) => {
+        // numbered cards that slide in from the left, one after another
+        const inner = `<span class="cx-ix">${String(i + 1).padStart(2, "0")}</span>
+        <div><h3>${esc(c.title)}</h3><p>${esc(c.issuer)}</p>
+        <div class="cx-meta"><span>${esc(c.date)}</span>${c.badge ? `<b>${esc(c.badge)}</b>` : ""}${c.url ? `<span class="cx-view">view ↗</span>` : ""}</div></div>`;
         return c.url
-          ? `<a class="card hover cert reveal" href="${esc(c.url)}" target="_blank" rel="noopener">${inner}</a>`
-          : `<div class="card hover cert reveal">${inner}</div>`;
+          ? `<a class="cx reveal-x" href="${esc(c.url)}" target="_blank" rel="noopener">${inner}</a>`
+          : `<div class="cx reveal-x">${inner}</div>`;
       }
     )
     .join("");
