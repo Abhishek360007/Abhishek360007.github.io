@@ -772,3 +772,4 @@ a.cx:hover { border-color: var(--accent); }
 .reveal-x.in { opacity: 1; transform: none; }
 a.cx.reveal-x.in:hover { transform: translateY(-3px); transition: transform 0.3s, border-color 0.3s; }
 @media (prefers-reduced-motion: reduce) { .reveal-x { opacity: 1; transform: none; transition: none; } }
+@media (max-width: 760px) { .cert-grid { grid-template-columns: 1fr; } }
