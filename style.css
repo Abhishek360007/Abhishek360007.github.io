@@ -762,3 +762,4 @@ h1, h2, h3 { font-family: "Space Grotesk", sans-serif; line-height: 1.2; }
   background: var(--card); border: 1px solid var(--border); color: inherit;
 }
 a.cx:hover { border-color: var(--accent); }
+.cx-ix { font: 500 0.75rem "JetBrains Mono", monospace; color: var(--accent); padding-top: 4px; }
