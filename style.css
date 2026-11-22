@@ -765,3 +765,6 @@ a.cx:hover { border-color: var(--accent); }
 .cx-ix { font: 500 0.75rem "JetBrains Mono", monospace; color: var(--accent); padding-top: 4px; }
 .cx h3 { font-size: 1.03rem; margin-bottom: 4px; }
 .cx p { font-size: 0.85rem; color: var(--muted); }
+.cx-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; font: 400 0.75rem "JetBrains Mono", monospace; color: var(--muted); }
+.cx-meta b { color: var(--green); font-weight: 500; }
+.cx-view { color: var(--accent); }
