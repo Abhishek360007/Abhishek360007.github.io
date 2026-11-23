@@ -48,7 +48,7 @@ const PORTFOLIO = {
       location: "Remote",
       summary: "Built and shipped full-stack web applications for client projects.",
       points: [
-        "Built and deployed <b>ShopVerse</b>, an e-commerce platform (<b>React.js, Spring Boot, PostgreSQL</b>) with <b>34 REST APIs</b> for search, cart, checkout and order tracking.",
+        "Built and deployed <b>ShopVerse</b>, a full-stack e-commerce platform (<b>React.js, Spring Boot, PostgreSQL</b>) with <b>34 REST APIs</b> for search, cart, checkout and order tracking.",
         "Secured it with <b>Spring Security, JWT and Google OAuth2</b>; added <b>Stripe</b> payments via a webhook that records each payment exactly once.",
         "Prevented overselling with <b>race-safe stock updates</b> and built an <b>admin dashboard</b> for revenue, low-stock alerts and orders.",
         "Shipped with <b>Docker</b> and <b>GitHub Actions CI/CD</b> running <b>65 automated tests</b>; documented APIs with <b>Swagger</b>.",
